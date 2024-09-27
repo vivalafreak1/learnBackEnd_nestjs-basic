@@ -5,3 +5,6 @@ Content-Type: application/json
     "username": "arief",
     "password": "arief"
 }
+
+GET http://localhost:8000/api/users/current
+x-username: 1
