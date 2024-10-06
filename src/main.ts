@@ -23,8 +23,9 @@ async function bootstrap() {
   // app.useGlobalInterceptors(...);
   // app.useGlobalGuards(...);
 
-  const configService = app.get(ConfigService);
+  app.enableShutdownHooks();
 
+  const configService = app.get(ConfigService);
   await app.listen(configService.get('PORT'));
 }
 bootstrap();
